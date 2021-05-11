@@ -3,7 +3,7 @@ About r-bio3d
 
 Home: http://thegrantlab.org/bio3d/, http://bitbucket.org/Grantlab/bio3d
 
-Package license: GPL-2
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bio3d-feedstock/blob/master/LICENSE.txt)
 
