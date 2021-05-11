@@ -1,4 +1,4 @@
-{% set version = "2.4-1" %}
+{% set version = "2.4-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bio3d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bio3d/bio3d_{{ version }}.tar.gz
-  sha256: 679fbd87fe9fb82a65427d281d3b68906509e411270cd87d2deb95d404333c1f
+  sha256: 91415766cda0f96557e6bc568dbce8d44254a9460f2e2d0beed0ce14ffad6ccb
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,19 +46,12 @@ test:
 about:
   home: http://thegrantlab.org/bio3d/, http://bitbucket.org/Grantlab/bio3d
   license: GPL-2
-  summary: Utilities to process, organize and explore protein structure, sequence and dynamics
-    data. Features include the ability to read and write structure, sequence and dynamic
-    trajectory data, perform sequence and structure database searches, data summaries,
-    atom selection, alignment, superposition, rigid core identification, clustering,
-    torsion analysis, distance matrix analysis, structure and sequence conservation
-    analysis, normal mode analysis, principal component analysis of heterogeneous structure
-    data, and correlation network analysis from normal mode and molecular dynamics data.
-    In addition, various utility functions are provided to enable the statistical and
-    graphical power of the R environment to work with biological sequence and structural
-    data. Please refer to the URLs below for more information.
+  summary: Utilities to process, organize and explore protein structure, sequence and dynamics data. Features include the ability to read and write structure, sequence and dynamic trajectory data, perform sequence and structure database searches, data summaries, atom selection, alignment, superposition, rigid core identification,
+    clustering, torsion analysis, distance matrix analysis, structure and sequence conservation analysis, normal mode analysis, principal component analysis of heterogeneous structure data, and correlation network analysis from normal mode and molecular dynamics data. In addition, various utility functions are provided to
+    enable the statistical and graphical power of the R environment to work with biological sequence and structural data. Please refer to the URLs below for more information.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
