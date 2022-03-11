@@ -1,4 +1,4 @@
-{% set version = "2.4-2" %}
+{% set version = "2.4-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bio3d_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bio3d/bio3d_{{ version }}.tar.gz
-  sha256: 91415766cda0f96557e6bc568dbce8d44254a9460f2e2d0beed0ce14ffad6ccb
+  sha256: c6031f0d9033260a938171d0fa70720962e352935eb7bd2ddb9b92b93abe6a74
 
 build:
   merge_build_host: true  # [win]
