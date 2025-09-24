@@ -34,6 +34,7 @@ requirements:
   host:
     - r-base
     - r-rcpp
+    - zlib
   run:
     - r-base
     - r-rcpp
